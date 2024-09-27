@@ -33,14 +33,12 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.MainViewHolder>() {
     }
 
     override fun getItemCount(): Int {
-        return games.size ?: 0
+        return games.size
     }
 
     override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
-        val gameValue = games?.get(position)
-        if (gameValue != null) {
-            holder.bind(gameValue)
-        }
+        val gameValue = games[position]
+        holder.bind(gameValue)
     }
 }
 
